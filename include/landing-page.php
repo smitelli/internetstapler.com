@@ -5,7 +5,6 @@
     }
 
 ?>
-
     <form id="landing">
         <h1><?php echo htmlentities($options['tagline']); ?></h1>
         URL: <input type="text" value="http://en.wikipedia.org" id="landing-url">

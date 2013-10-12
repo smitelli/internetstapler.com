@@ -9,7 +9,6 @@
     }
 
 ?>
-
     <!-- Nothing loading? Maybe the site you're trying to view is setting a
          X-Frame-Options header. Security bastards ruin all the fun. -->
 
