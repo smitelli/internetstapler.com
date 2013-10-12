@@ -9,7 +9,7 @@
     #landing input { border:1px solid #888; font-size:24px; }
     #landing-url   { width:400px; color:#888; }
     #landing-go    { background:#44f; color:#fff; }
-    #overlay-box   { position:absolute; width:400px; height:150px; background:url(/stapler.png) no-repeat; }
+    #overlay-box   { position:absolute; width:400px; height:150px; background:url(/images/stapler.png) no-repeat; }
     #content-box   { border:0; width:100%; height:100%; }
     .flipped       { transform:scaleX(-1); filter:FlipH; -moz-transform:scaleX(-1); -o-transform:scaleX(-1); -webkit-transform:scaleX(-1); -ms-filter:FlipH; }
   </style>
@@ -28,10 +28,10 @@
 
   if ($url) {
     if (preg_match('~^http://~i', $url) == 0) $url = 'http://' . $url;
-    require dirname(__FILE__) . '/overlay.php';
+    require dirname(__FILE__) . '/include/overlay.php';
 
   } else {
-    require dirname(__FILE__) . '/landing-page.php';
+    require dirname(__FILE__) . '/include/landing-page.php';
   }
 
 ?>
