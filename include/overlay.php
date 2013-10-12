@@ -1,9 +1,11 @@
 <?php
 
-    if (!defined('GOOD_INIT')) die('Go away.');
+    if (!defined('GOOD_INIT')) {
+        die('Go away.');
+    }
 
-    if (preg_match('~^http://~i', $url) == 0) {
-        $url = 'http://' . $url;
+    if (preg_match('~^http://~i', $url) === 0) {
+        $url = "http://{$url}";
     }
 
 ?>

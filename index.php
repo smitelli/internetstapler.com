@@ -2,7 +2,7 @@
 
     define('GOOD_INIT', TRUE);
 
-    $options = parse_ini_file($_SERVER['INTERNETSTAPLER_CONFIG']);
+    $options = parse_ini_file(dirname(__FILE__) . '/config/internetstapler.ini');
 
     $matches = array();
     preg_match('~/go/(.*)$~i', $_SERVER['REQUEST_URI'], $matches);
