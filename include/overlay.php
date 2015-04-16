@@ -4,7 +4,7 @@
         die('Go away.');
     }
 
-    if (preg_match('~^http://~i', $url) === 0) {
+    if (preg_match('~^http(s)?://~i', $url) === 0) {
         $url = "http://{$url}";
     }
 
