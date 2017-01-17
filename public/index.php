@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <title><?php echo htmlentities($options['title']); ?></title>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <style>
         body, html     { margin:0; height:100%; overflow:hidden; font-family:Helvetica,Arial,sans-serif; }
         #landing       { text-align:center; padding-top:200px; }
