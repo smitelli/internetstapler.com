@@ -1,9 +1,5 @@
 <?php
 
-    if (!defined('GOOD_INIT')) {
-        die('Go away.');
-    }
-
     if (preg_match('~^http(s)?://~i', $url) === 0) {
         $url = "http://{$url}";
     }
