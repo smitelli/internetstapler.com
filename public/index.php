@@ -19,7 +19,7 @@
         $self_scheme = 'http';
     }
 
-    if ($url && $url_scheme !== $self_scheme) {
+    if ($url_scheme && $url_scheme !== $self_scheme) {
         $location = $url_scheme . '://' . $options['hostname'] . '/go/' . $url;
 
         header('HTTP/1.1 301 Moved Permanently');
