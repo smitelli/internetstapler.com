@@ -6,6 +6,27 @@
     preg_match('~/go/(.*)$~i', $_SERVER['REQUEST_URI'], $matches);
     $url = isset($matches[1]) ? $matches[1] : FALSE;
 
+    $url_scheme = FALSE;
+    if ($url && strpos($url, "https:") === 0) {
+        $url_scheme = 'https';
+    } else if ($url && strpos($url, "http:") === 0) {
+        $url_scheme = 'http';
+    }
+
+    if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
+        $self_scheme = 'https';
+    } else {
+        $self_scheme = 'http';
+    }
+
+    if ($url && $url_scheme !== $self_scheme) {
+        $location = $url_scheme . '://' . $options['hostname'] . '/go/' . $url;
+
+        header('HTTP/1.1 301 Moved Permanently');
+        header("Location: $location");
+        exit();
+    }
+
 ?>
 <!DOCTYPE html>
 <head>
