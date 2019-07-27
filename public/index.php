@@ -29,6 +29,7 @@
 
 ?>
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title><?php echo htmlentities($options['title']); ?></title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -58,7 +59,7 @@
     if ($options['ga_identifier']) {
 
 ?>
-    <script type="text/javascript">
+    <script>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', '<?php echo addslashes($options['ga_identifier']); ?>'], ['_trackPageview']);
         (function () {
