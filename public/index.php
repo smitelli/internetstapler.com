@@ -30,7 +30,6 @@
 ?>
 <!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
     <title><?php echo htmlentities($options['title']); ?></title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <style>
